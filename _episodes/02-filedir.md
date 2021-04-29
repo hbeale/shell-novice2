@@ -94,12 +94,14 @@ this is the leading slash in `/public/home/nelle`.
 Inside that directory are several other directories:
 `bin` (which is where some built-in programs are stored),
 `data` (for miscellaneous data files),
-`Users` (where users' personal directories are located),
+`public` (where public user and group directories are located),
 `tmp` (for temporary files that don't need to be stored long-term),
 and so on.
 
-We know that our current working directory `/public/home/nelle` is stored inside `/public`
-because `/public` is the first part of its name.
+We know that nelle's home directory, `nelle`, is stored inside `home`
+because `home` comes before `nelle` in `/public/home/nelle`. 
+We know that `home` is stored inside `public`
+because `public` comes before `home` in `/public/home/nelle`. 
 Similarly,
 we know that `/public` is stored inside the root directory `/`
 because its name begins with `/`.
