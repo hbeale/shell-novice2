@@ -9,10 +9,6 @@ objectives:
 - "Explain how the shell relates to the keyboard, the screen, the operating system, and users' programs."
 - "Explain when and why command-line interfaces should be used instead of graphical interfaces."
 keypoints:
-- "Explain the steps in the shell's read-run-print cycle."
-- "Most commands take options (flags) which begin with a `-`."
-- "Identify the actual command, options, and filenames in a command-line call."
-- "Demonstrate the use of tab completion and explain its advantages."
 - "A shell is a program whose primary purpose is to read commands and run other programs."
 - "The shell's main advantages are its high action-to-keystroke ratio, its support for
 automating repetitive tasks, and its capacity to access networked machines."
