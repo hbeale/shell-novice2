@@ -87,8 +87,7 @@ $ ls
 {: .language-bash}
 
 ~~~
-Desktop     Downloads   Movies      Pictures
-Documents   Library     Music       Public
+data-shell  data-shell.zip
 ~~~
 {: .output}
 
