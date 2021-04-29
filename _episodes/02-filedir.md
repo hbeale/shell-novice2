@@ -114,16 +114,8 @@ because its name begins with `/`.
 > it's just a separator.
 {: .callout}
 
-Underneath `/public/home`,
-we find one directory for each user with an account on Nelle's machine,
-her colleagues *imhotep* and *larry*.
-
-![Like other directories, home directories are sub-directories underneath 
-"/public/home" like "/public/home/imhotep", "/public/home/larry" or 
-"/public/home/nelle"](../fig/home-directories.svg)
-
-The user *imhotep*'s files are stored in `/public/home/imhotep`,
-user *larry*'s in `/public/home/larry`,
+Underneath `/public/home`, there are directories for each user with an account on Nelle's machine. 
+The user *hcbeale*'s files would be stored in `/public/home/hcbeale`,
 and Nelle's in `/public/home/nelle`.  Because Nelle is the user in our
 examples here, therfore we get `/public/home/nelle` as our home directory.
 Typically, when you first log in to the server you will be in
@@ -378,10 +370,10 @@ To **quit** the `man` pages, press <kbd>Q</kbd>.
 ### Exploring Other Directories
 
 Not only can we use `ls` on the current working directory, but we can use it to list the contents of a different directory.  Let's take a
-look at our `Desktop` directory by running `ls -F Desktop`,
+look at our the `data-shell` directory we created earlier by running `ls -F data-shell`,
 i.e.,
-the command `ls` with the `-F` **option** and the **argument**  `Desktop`.
-The argument `Desktop` tells `ls` that
+the command `ls` with the `-F` **option** and the **argument**  `data-shell`.
+The argument `data-shell` tells `ls` that
 we want a listing of something other than our current working directory:
 
 ~~~
@@ -390,20 +382,13 @@ $ ls -F Desktop
 {: .language-bash}
 
 ~~~
-data-shell/
+creatures/  data/  molecules/  north-pacific-gyre/  notes.txt  pizza.cfg  solar.pdf  writing/
 ~~~
 {: .output}
 
-Note that if a directory named `Desktop` does not exist in your current working directory
-this command will return an error. Typically a `Desktop` directory exists in your 
-home directory, which we assume is the current working directory of your bash shell.
-
-Your output should be a list of all the files and sub-directories in your
-Desktop directory, including the `data-shell` directory you downloaded at
+Note that if a directory named `data-shell` does not exist in your current working directory
+this command will return an error. Your output should be a list of all the files and sub-directories in the `data-shell` directory you downloaded at
 the [setup for this lesson]({{ page.root }}{% link setup.md %}).
-On many systems,
-the command line Desktop directory is the same as your GUI Desktop.
-Take a look at your Desktop to confirm that your output is accurate.
 
 As you may now see, using a bash shell is strongly dependent on the idea that
 your files are organized in a hierarchical file system.
@@ -412,24 +397,8 @@ it's possible to put hundreds of files in our home directory,
 just as it's possible to pile hundreds of printed papers on our desk,
 but it's a self-defeating strategy.
 
-Now that we know the `data-shell` directory is located in our Desktop directory, we
-can do two things.
-
-First, we can look at its contents, using the same strategy as before, passing
-a directory name to `ls`:
-
-~~~
-$ ls -F Desktop/data-shell
-~~~
-{: .language-bash}
-
-~~~
-creatures/          molecules/          notes.txt           solar.pdf
-data/               north-pacific-gyre/ pizza.cfg           writing/
-~~~
-{: .output}
-
-Second, we can actually change our location to a different directory, so
+Now that we know the `data-shell` directory is present, 
+we can actually change our location to a different directory, so
 we are no longer located in
 our home directory.
 
@@ -445,17 +414,16 @@ Let's say we want to move to the `data` directory we saw above.  We can
 use the following series of commands to get there:
 
 ~~~
-$ cd Desktop
 $ cd data-shell
 $ cd data
 ~~~
 {: .language-bash}
 
-These commands will move us from our home directory into our Desktop directory, then into
+These commands will move us from our home into
 the `data-shell` directory, then into the `data` directory.  You will notice that `cd` doesn't print anything.  This is normal.  Many shell commands will not output anything to the screen when successfully executed.  But if we run `pwd` after it, we can see that we are now
-in `/Users/nelle/Desktop/data-shell/data`.
+in `/public/home/nelle/data-shell/data`. 
 If we run `ls -F` without arguments now,
-it lists the contents of `/Users/nelle/Desktop/data-shell/data`,
+it lists the contents of `/public/home/nelle/data-shell/data`,
 because that's where we now are:
 
 ~~~
@@ -464,7 +432,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell/data
+/public/home/nelle/data-shell/data
 ~~~
 {: .output}
 
@@ -513,7 +481,7 @@ $ cd ..
 or more succinctly,
 the **parent** of the current directory.
 Sure enough,
-if we run `pwd` after running `cd ..`, we're back in `/Users/nelle/Desktop/data-shell`:
+if we run `pwd` after running `cd ..`, we're back in `/public/home/nelle/data-shell/`:
 
 ~~~
 $ pwd
@@ -521,7 +489,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell
+/public/home/nelle/data-shell
 ~~~
 {: .output}
 
@@ -534,14 +502,14 @@ $ ls -F -a
 {: .language-bash}
 
 ~~~
-./   .bash_profile  data/       north-pacific-gyre/  pizza.cfg  thesis/
-../  creatures/     molecules/  notes.txt            solar.pdf  writing/
+./  ../  .bash_profile  creatures/  data/  molecules/  
+north-pacific-gyre/  notes.txt  pizza.cfg  solar.pdf  writing/
 ~~~
 {: .output}
 
 `-a` stands for 'show all';
 it forces `ls` to show us file and directory names that begin with `.`,
-such as `..` (which, if we're in `/Users/nelle`, refers to the `/Users` directory)
+such as `..` (which, if we're in `/public/home/nelle/`, refers to the `/public/home/` directory)
 As you can see,
 it also displays another special directory that's just called `.`,
 which means 'the current working directory'.
@@ -568,8 +536,8 @@ equivalent to `ls -Fa`.
 > The special names `.` and `..` don't belong to `cd`;
 > they are interpreted the same way by every program.
 > For example,
-> if we are in `/Users/nelle/data`,
-> the command `ls ..` will give us a listing of `/Users/nelle`.
+> if we are in `/public/home/nelle/data-shell`,
+> the command `ls ..` will give us a listing of `/public/home/nelle`.
 > When the meanings of the parts are the same no matter how they're combined,
 > programmers say they are **orthogonal**:
 > Orthogonal systems tend to be easier for people to learn
@@ -594,7 +562,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle
+/public/home/nelle/
 ~~~
 {: .output}
 
@@ -606,7 +574,7 @@ three commands, but we can actually string together the list of directories
 to move to `data` in one step:
 
 ~~~
-$ cd Desktop/data-shell/data
+$ cd data-shell/data
 ~~~
 {: .language-bash}
 
@@ -638,12 +606,12 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell/data
+/public/home/nelle/data-shell/data
 ~~~
 {: .output}
 
 ~~~
-$ cd /Users/nelle/Desktop/data-shell
+$ cd /public/home/nelle/data-shell
 ~~~
 {: .language-bash}
 
@@ -653,8 +621,8 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 >
 > The shell interprets the character `~` (tilde) at the start of a path to
 > mean "the current user's home directory". For example, if Nelle's home
-> directory is `/Users/nelle`, then `~/data` is equivalent to
-> `/Users/nelle/data`. This only works if it is the first character in the
+> directory is `/public/home/nelle`, then `~/data` is equivalent to
+> `/public/home/nelle/data`. This only works if it is the first character in the
 > path: `here/there/~/elsewhere` is *not* `here/there/Users/nelle/elsewhere`.
 >
 > Another shortcut is the `-` (dash) character.  `cd` will translate `-` into
