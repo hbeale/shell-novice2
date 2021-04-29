@@ -10,7 +10,7 @@ If you need help with this step, please see the section of the handbook called "
 ## Download files
 Use the following commands to download some files that are used in this tutorial. These commands won't necessarily make sense right now, but the tutorial will help you understand how to interpret them.
 
-1. On Park, run the command `wget https://UCSC-Treehouse.github.io/shell-novice2/data/data-shell.zip` to download the file. It's easiest to copy the command to the server. Press enter once you've pasted it. If you're using Windows and PuTTY, check the handbook for instructions on pasting.
+On Park, run the command `wget https://UCSC-Treehouse.github.io/shell-novice2/data/data-shell.zip` to download the file. It's easiest to copy the command to the server. Press enter once you've pasted it. If you're using Windows and PuTTY, check the handbook for instructions on pasting.
    
 After you run the command, you should see something like the following
 ~~~   
@@ -29,8 +29,7 @@ Saving to: ‘data-shell.zip’
 ~~~
 {: .output}
 
-2. Run the command `unzip -o data-shell.zip` to unzip/extract the file. 
-   **If you need help with this step, please reach out on Slack**
+Run the command `unzip -o data-shell.zip` to unzip/extract the file. **If you need help with this step, please reach out on Slack**
 
 After you run the unzip command, you'll see many files scroll by, and the end will look something like this
 ~~~   
