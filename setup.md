@@ -4,13 +4,14 @@ title: Setup
 root: .
 ---
 
+## Connect to the Park server
+The command is `ssh username@park.gi.ucsc.edu`, where username is your username. If you need help with this step, please see the section of the handbook called "Connecting to the server."
+
 ## Download files
 You need to download some files to follow this lesson.
 
-1. Download [data-shell.zip][zip-file] and move the file to your Desktop.
-2. Unzip/extract the file.
-   **Let your instructor know if you need help with this step**.
-   You should end up with a new folder called **`data-shell`** on your Desktop.
+1. Run the command `wget https://hbeale.github.io/shell-novice2/data/data-shell.zip` to download the file and then `unzip -o data-shell.zip` to unzip/extract the file. 
+   **If you need help with this step, please reach out on Slack**
 
 ## Install software
 If you do not already have the shell software installed, you will need to
