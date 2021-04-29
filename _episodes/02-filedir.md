@@ -49,12 +49,12 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle
+/public/home/nelle
 ~~~
 {: .output}
 
 Here,
-the computer's response is `/Users/nelle`,
+the computer's response is `/public/home/nelle`,
 which is Nelle's **home directory**:
 
 > ## Home Directory Variation
@@ -89,7 +89,7 @@ titled bin, data, users, and tmp](../fig/filesystem.svg)
 At the top is the **root directory**
 that holds everything else.
 We refer to it using a slash character, `/`, on its own;
-this is the leading slash in `/Users/nelle`.
+this is the leading slash in `/public/home/nelle`.
 
 Inside that directory are several other directories:
 `bin` (which is where some built-in programs are stored),
@@ -98,10 +98,10 @@ Inside that directory are several other directories:
 `tmp` (for temporary files that don't need to be stored long-term),
 and so on.
 
-We know that our current working directory `/Users/nelle` is stored inside `/Users`
-because `/Users` is the first part of its name.
+We know that our current working directory `/public/home/nelle` is stored inside `/public`
+because `/public` is the first part of its name.
 Similarly,
-we know that `/Users` is stored inside the root directory `/`
+we know that `/public` is stored inside the root directory `/`
 because its name begins with `/`.
 
 > ## Slashes
@@ -112,19 +112,19 @@ because its name begins with `/`.
 > it's just a separator.
 {: .callout}
 
-Underneath `/Users`,
+Underneath `/public/home`,
 we find one directory for each user with an account on Nelle's machine,
 her colleagues *imhotep* and *larry*.
 
 ![Like other directories, home directories are sub-directories underneath 
-"/Users" like "/Users/imhotep", "/Users/larry" or 
-"/Users/nelle"](../fig/home-directories.svg)
+"/public/home" like "/public/home/imhotep", "/public/home/larry" or 
+"/public/home/nelle"](../fig/home-directories.svg)
 
-The user *imhotep*'s files are stored in `/Users/imhotep`,
-user *larry*'s in `/Users/larry`,
-and Nelle's in `/Users/nelle`.  Because Nelle is the user in our
-examples here, therfore we get `/Users/nelle` as our home directory.
-Typically, when you open a new command prompt you will be in
+The user *imhotep*'s files are stored in `/public/home/imhotep`,
+user *larry*'s in `/public/home/larry`,
+and Nelle's in `/public/home/nelle`.  Because Nelle is the user in our
+examples here, therfore we get `/public/home/nelle` as our home directory.
+Typically, when you first log in to the server you will be in
 your home directory to start.
 
 Now let's learn the command that will let us see the contents of our
@@ -136,8 +136,7 @@ $ ls
 {: .language-bash}
 
 ~~~
-Applications Documents    Library      Music        Public
-Desktop      Downloads    Movies       Pictures
+data-shell  data-shell.zip
 ~~~
 {: .output}
 
@@ -163,8 +162,7 @@ $ ls -F
 {: .language-bash}
 
 ~~~
-Applications/ Documents/    Library/      Music/        Public/
-Desktop/      Downloads/    Movies/       Pictures/
+data-shell/  data-shell.zip
 ~~~
 {: .output}
 
@@ -176,9 +174,9 @@ Desktop/      Downloads/    Movies/       Pictures/
 {: .callout}
 
 Here,
-we can see that our home directory contains only **sub-directories**.
-Any names in your output that don't have a classification symbol,
-are plain old **files**.
+we can see that our home directory contains a **sub-directory**. 
+data-shell.zip doesn't have a classification symbol, so it is
+a plain old **file**.
 
 
 ## General syntax of a shell command
@@ -205,13 +203,11 @@ between `ls` and `-F` the shell will look for a command called `ls-F`, which
 doesn't exist. Also, capitalization can be important. For example, `ls -s` will display the size of files and directories alongside the names, while `ls -S` will sort the files and directories by size, as shown below:
 
 ~~~
-$ ls -s Desktop/data-shell/data
-total 116
- 4 amino-acids.txt   4 animals.txt   4 morse.txt  12 planets.txt  76 sunspot.txt
- 4 animal-counts     4 elements      4 pdb         4 salmon.txt
-$ ls -S Desktop/data-shell/data
-sunspot.txt  animal-counts  pdb        amino-acids.txt  salmon.txt
-planets.txt  elements       morse.txt  animals.txt
+$ ls -s data-shell/data
+total 112
+ 4 amino-acids.txt   0 animal-counts   4 animals.txt   4 elements   4 morse.txt   4 pdb  12 planets.txt   4 salmon.txt  76 sunspot.txt
+$ ls -S data-shell/data
+sunspot.txt  planets.txt  elements  pdb  morse.txt  amino-acids.txt  animals.txt  salmon.txt  animal-counts
 ~~~
 {: .output}
 
