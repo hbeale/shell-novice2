@@ -84,7 +84,7 @@ which will be constructed in a similar way, but not be exactly identical.
 On Nelle's computer, the filesystem looks like this:
 
 ![The file system is made up of a root directory that contains sub-directories
-titled bin, data, users, and tmp](../fig/filesystem.svg)
+titled bin, data, users, and tmp](../fig/filesystem2.svg)
 
 At the top is the **root directory**
 that holds everything else.
@@ -221,9 +221,9 @@ $ ls -F /
 {: .language-bash}
 
 ~~~
-Applications/         System/
-Library/              Users/
-Network/              Volumes/
+3.10.0-1127.19.1.el7.x86_64/  boot/  depmod.conf  etc/   lib@    media/  mnt/  opt/   public/  run/   scratch/  sys/  usr/
+bin@                          data@  dev/         home/  lib64@  misc/   net/  proc/  root/    sbin@  srv/      tmp/  var/
+
 ~~~
 {: .output}
 
