@@ -1,7 +1,6 @@
 ---
 title: "Introducing the Shell"
-teaching: 5
-exercises: 0
+
 questions:
 - "What is a command shell and why would I use one?"
 objectives:
