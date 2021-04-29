@@ -3,6 +3,9 @@ layout: lesson
 root: .
 ---
 
+The Unix shell is a program that enables us to send commands to the computer and receive output.
+It is also referred to as the terminal or command line.
+
 The Unix shell has been around longer than most of its users have been alive.
 It has survived so long because it's a power tool
 that allows people to do complex things with just a few keystrokes.
