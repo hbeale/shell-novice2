@@ -377,7 +377,7 @@ The argument `data-shell` tells `ls` that
 we want a listing of something other than our current working directory:
 
 ~~~
-$ ls -F Desktop
+$ ls -F data-shell
 ~~~
 {: .language-bash}
 
