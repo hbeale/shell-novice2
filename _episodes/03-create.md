@@ -26,7 +26,7 @@ We now know how to explore files and directories,
 but how do we create them in the first place?
 
 ### Step one: see where we are and what we already have
-Let's go back to our `data-shell` directory on the Desktop
+Let's go back to our `data-shell` directory 
 and use `ls -F` to see what it contains:
 
 ~~~
@@ -35,7 +35,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell
+/public/home/nelle/data-shell
 ~~~
 {: .output}
 
@@ -169,10 +169,7 @@ $ nano draft.txt
 >
 > No matter what editor you use, you will need to know where it searches
 > for and saves files. If you start it from the shell, it will (probably)
-> use your current working directory as its default location. If you use
-> your computer's start menu, it may want to save files in your desktop or
-> documents directory instead. You can change this by navigating to
-> another directory the first time you 'Save As...'
+> use your current working directory as its default location.
 {: .callout}
 
 Let's type in a few lines of text.
@@ -285,7 +282,7 @@ draft.txt
 Returning to the `data-shell` directory,
 
 ```
-cd ~/Desktop/data-shell/
+cd /public/home/nelle/data-shell/
 ```
 {: .language-bash}
 
