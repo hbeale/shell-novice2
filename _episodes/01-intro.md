@@ -27,6 +27,7 @@ Using a GUI, you would not only be clicking at your desk for several hours, but 
 The Unix shell is both a **command-line interface** (CLI) and a scripting language, allowing such repetitive tasks to be done automatically and fast.
 With the proper commands, the shell can repeat tasks with or without some modification as many times as we want.
 Using the shell, the task in the literature example can be accomplished in seconds.
+This is especially valuable in the context of research and reproducibility.
 
 
 ### The Shell
