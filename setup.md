@@ -4,13 +4,13 @@ title: Setup
 root: .
 ---
 
-## Connect to the Park server
+## Connect to the server
 If you need help with this step, please see the section of the handbook called "Connecting to the server."
 
 ## Download files
 Use the following commands to download some files that are used in this tutorial. These commands won't necessarily make sense right now, but the rest of the tutorial will help you understand how to interpret them.
 
-On Park, run the command `wget https://UCSC-Treehouse.github.io/shell-novice2/data/data-shell.zip` to download the file. It's easiest to copy the command to the server. Press enter once you've pasted it. If you're using Windows and PuTTY, check the handbook for instructions on pasting.
+On the server, run the command `wget https://UCSC-Treehouse.github.io/shell-novice2/data/data-shell.zip` to download the file. It's easiest to copy the command to the server. Press enter once you've pasted it. If you're using Windows and PuTTY, check the handbook for instructions on pasting.
    
 After you run the command, you should see something like the following
 ~~~   
