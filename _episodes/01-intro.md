@@ -29,6 +29,27 @@ With the proper commands, the shell can repeat tasks with or without some modifi
 Using the shell, the task in the literature example can be accomplished in seconds.
 This is especially valuable in the context of research and reproducibility.
 
+### How this tutorial works
+
+Any box that starts with the bolded text "Bash" is intended to show you a command for you to run. The format of the box will be like this:
+
+~~~
+$
+~~~
+{: .language-bash}
+
+Sometimes the tutorial will contain text that might be the contents of a file or commands someone else ran as an example. You do not need to type or run these. They come in boxes labeled "Code", like this:
+~~~
+ 
+~~~
+> {: .source}
+
+
+Boxes labeled "Output" will contain the results of a command you've run or the results of a commands someone else ran as an example. Again, you don't need to type these out. 
+~~~
+ 
+~~~
+{: .output}
 
 ### The Shell
 
