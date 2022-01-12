@@ -42,7 +42,7 @@ Sometimes the tutorial will contain text that might be the contents of a file or
 ~~~
  
 ~~~
-> {: .source}
+{: .source}
 
 
 Boxes labeled "Output" will contain the results of a command you've run or the results of a commands someone else ran as an example. Again, you don't need to type these out. 
