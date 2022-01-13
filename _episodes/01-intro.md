@@ -38,7 +38,7 @@ $
 ~~~
 {: .language-bash}
 
-Sometimes the tutorial will contain text that might be the contents of a file or commands someone else ran as an example. You do not need to type or run these. They come in boxes labeled "Code", like this:
+Sometimes the tutorial will contain text that might be the contents of a file or commands someone else ran as an example. You do not need to type or run these, and if you do, the commands might not work. They come in boxes labeled "Code", like this:
 ~~~
  
 ~~~
