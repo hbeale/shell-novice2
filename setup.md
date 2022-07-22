@@ -5,7 +5,7 @@ root: .
 ---
 
 ## Connect to the server
-If you need help with this step, please see the section of the handbook called "Connecting to the server."
+If you need help with this step, please see the section of the [variant calling protocol](https://docs.google.com/document/d/1nzDhrHuUwQqAR_CeNkPTANjEzozcomwcT7n4ixP2MR8/edit#heading=h.yiav797oa3t3) called "Log in to the server." 
 
 ## Download files
 Use the following commands to download some files that are used in this tutorial. These commands won't necessarily make sense right now, but the rest of the tutorial will help you understand how to interpret them.
