@@ -282,7 +282,7 @@ draft.txt
 Returning to the `data-shell` directory,
 
 ```
-cd /public/home/nelle/data-shell/
+cd ~/data-shell/
 ```
 {: .language-bash}
 
