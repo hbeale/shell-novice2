@@ -98,7 +98,7 @@ The cursor is usually a flashing or solid block, but it can also be an underscor
 You may have seen it in a text editor program, for example.
 
 So let's try our first command, `ls` which is short for listing.
-This command will list the contents of the current directory:
+This command will list the contents of the current directory, which should include data-shell and data-shell.zip, and may include additional items:
 
 ~~~
 $ ls
