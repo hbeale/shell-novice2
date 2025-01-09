@@ -49,12 +49,12 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/public/home/nelle
+/home/nelle
 ~~~
 {: .output}
 
 Here,
-the computer's response is `/public/home/nelle`,
+the computer's response is `/home/nelle`,
 which is Nelle's **home directory**:
 
 > ## Home Directory Variation
@@ -89,7 +89,7 @@ titled bin, data, users, and tmp](../fig/filesystem.svg)
 At the top is the **root directory**
 that holds everything else.
 We refer to it using a slash character, `/`, on its own;
-this is the leading slash in `/public/home/nelle`.
+this is the leading slash in `/home/nelle`.
 
 Inside that directory are several other directories:
 `bin` (which is where some built-in programs are stored),
@@ -99,9 +99,9 @@ Inside that directory are several other directories:
 and so on.
 
 We know that nelle's home directory, `nelle`, is stored inside `home`
-because `home` comes before `nelle` in `/public/home/nelle`. 
+because `home` comes before `nelle` in `/home/nelle`. 
 We know that `home` is stored inside `public`
-because `public` comes before `home` in `/public/home/nelle`. 
+because `public` comes before `home` in `/home/nelle`. 
 Similarly,
 we know that `/public` is stored inside the root directory `/`
 because its name begins with `/`.
@@ -116,8 +116,8 @@ because its name begins with `/`.
 
 Underneath `/public/home`, there are directories for each user with an account on Nelle's machine. 
 The user *hcbeale*'s files would be stored in `/public/home/hcbeale`,
-and Nelle's in `/public/home/nelle`.  Because Nelle is the user in our
-examples here, therfore we get `/public/home/nelle` as our home directory.
+and Nelle's in `/home/nelle`.  Because Nelle is the user in our
+examples here, therfore we get `/home/nelle` as our home directory.
 Typically, when you first log in to the server you will be in
 your home directory to start.
 
@@ -421,9 +421,9 @@ $ cd data
 
 These commands will move us from our home into
 the `data-shell` directory, then into the `data` directory.  You will notice that `cd` doesn't print anything.  This is normal.  Many shell commands will not output anything to the screen when successfully executed.  But if we run `pwd` after it, we can see that we are now
-in `/public/home/nelle/data-shell/data`. 
+in `/home/nelle/data-shell/data`. 
 If we run `ls -F` without arguments now,
-it lists the contents of `/public/home/nelle/data-shell/data`,
+it lists the contents of `/home/nelle/data-shell/data`,
 because that's where we now are:
 
 ~~~
@@ -432,7 +432,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/public/home/nelle/data-shell/data
+/home/nelle/data-shell/data
 ~~~
 {: .output}
 
@@ -481,7 +481,7 @@ $ cd ..
 or more succinctly,
 the **parent** of the current directory.
 Sure enough,
-if we run `pwd` after running `cd ..`, we're back in `/public/home/nelle/data-shell/`:
+if we run `pwd` after running `cd ..`, we're back in `/home/nelle/data-shell/`:
 
 ~~~
 $ pwd
@@ -489,7 +489,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/public/home/nelle/data-shell
+/home/nelle/data-shell
 ~~~
 {: .output}
 
@@ -509,7 +509,7 @@ north-pacific-gyre/  notes.txt  pizza.cfg  solar.pdf  writing/
 
 `-a` stands for 'show all';
 it forces `ls` to show us file and directory names that begin with `.`,
-such as `..` (which, if we're in `/public/home/nelle/`, refers to the `/public/home/` directory)
+such as `..` (which, if we're in `/home/nelle/`, refers to the `/public/home/` directory)
 As you can see,
 it also displays another special directory that's just called `.`,
 which means 'the current working directory'.
@@ -536,8 +536,8 @@ equivalent to `ls -Fa`.
 > The special names `.` and `..` don't belong to `cd`;
 > they are interpreted the same way by every program.
 > For example,
-> if we are in `/public/home/nelle/data-shell`,
-> the command `ls ..` will give us a listing of `/public/home/nelle`.
+> if we are in `/home/nelle/data-shell`,
+> the command `ls ..` will give us a listing of `/home/nelle`.
 > When the meanings of the parts are the same no matter how they're combined,
 > programmers say they are **orthogonal**:
 > Orthogonal systems tend to be easier for people to learn
@@ -562,7 +562,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/public/home/nelle/
+/home/nelle/
 ~~~
 {: .output}
 
@@ -606,12 +606,12 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/public/home/nelle/data-shell/data
+/home/nelle/data-shell/data
 ~~~
 {: .output}
 
 ~~~
-$ cd /public/home/nelle/data-shell
+$ cd /home/nelle/data-shell
 ~~~
 {: .language-bash}
 
@@ -621,8 +621,8 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 >
 > The shell interprets the character `~` (tilde) at the start of a path to
 > mean "the current user's home directory". For example, if Nelle's home
-> directory is `/public/home/nelle`, then `~/data` is equivalent to
-> `/public/home/nelle/data`. This only works if it is the first character in the
+> directory is `/home/nelle`, then `~/data` is equivalent to
+> `/home/nelle/data`. This only works if it is the first character in the
 > path: `here/there/~/elsewhere` is *not* `here/there/Users/nelle/elsewhere`.
 >
 > Another shortcut is the `-` (dash) character.  `cd` will translate `-` into
