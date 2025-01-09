@@ -114,8 +114,8 @@ because its name begins with `/`.
 > it's just a separator.
 {: .callout}
 
-Underneath `/public/home`, there are directories for each user with an account on Nelle's machine. 
-The user *hcbeale*'s files would be stored in `/public/home/hcbeale`,
+Underneath `/home`, there are directories for each user with an account on Nelle's machine. 
+The user *hcbeale*'s files would be stored in `/home/hcbeale`,
 and Nelle's in `/home/nelle`.  Because Nelle is the user in our
 examples here, therfore we get `/home/nelle` as our home directory.
 Typically, when you first log in to the server you will be in
@@ -509,7 +509,7 @@ north-pacific-gyre/  notes.txt  pizza.cfg  solar.pdf  writing/
 
 `-a` stands for 'show all';
 it forces `ls` to show us file and directory names that begin with `.`,
-such as `..` (which, if we're in `/home/nelle/`, refers to the `/public/home/` directory)
+such as `..` (which, if we're in `/home/nelle/`, refers to the `/home/` directory)
 As you can see,
 it also displays another special directory that's just called `.`,
 which means 'the current working directory'.
